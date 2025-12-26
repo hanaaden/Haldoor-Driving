@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cloud, Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import logo from "../assets/logo.jpg";
 
 export default function LandingPage() {
