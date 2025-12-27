@@ -6,7 +6,7 @@ export default function LandingPage() {
   const [menuFuran, setMenuFuran] = useState(false);
 
   return (
-    <div className="font-sans text-slate-800 overflow-x-hidden">
+    <div className="font-sans text-slate-800 overflow-x-hidden bg-white">
 
       {/* ================= NAVBAR ================= */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b shadow-sm">
