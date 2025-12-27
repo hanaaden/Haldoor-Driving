@@ -189,34 +189,34 @@ export default function LandingPage() {
       </section>
 
       {/* ================= REGISTER ================= */}
-      <section
-        id="register"
-        className="bg-gradient-to-br from-pink-600 to-purple-900 text-white py-24 px-6"
-      >
-        <div className="max-w-xl mx-auto bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-2xl">
-          <h3 className="text-3xl font-extrabold text-center mb-8">
-            Is Diiwaangelinta Ardayga
-          </h3>
+<section
+  id="register"
+  className="py-16 px-4 sm:px-6 lg:px-12 bg-gradient-to-br from-primary to-purple-900"
+>
+  <div className="max-w-4xl mx-auto">
+    <h3 className="text-3xl sm:text-4xl lg:text-5xl text-white text-center font-extrabold mb-8">
+      Is Diiwaangeli Online
+    </h3>
 
-          <form className="space-y-4">
-            <input className="w-full p-3 rounded-lg bg-white/10 border border-white/20" placeholder="Magaca oo Dhan" />
-            <input className="w-full p-3 rounded-lg bg-white/10 border border-white/20" placeholder="Halka aad dagto" />
-            <input className="w-full p-3 rounded-lg bg-white/10 border border-white/20" placeholder="Lambarka Taleefanka" />
+    <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl border border-white/20">
+      {/* Background blur card */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-md pointer-events-none rounded-3xl" />
 
-            <select className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white">
-              <option className="text-black">Mudada aad rabto inaad ku barato</option>
-              <option className="text-black">15 Maalmood</option>
-              <option className="text-black">30 Maalmood</option>
-            </select>
+      {/* Iframe wrapper with max-height and scroll */}
+      <div className="relative w-full">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfsWfUizzzPp83_72bL5XKqs45bfoaFJZBQTJvNU60x10erYA/viewform?embedded=true"
+          className="w-full h-[1200px] sm:h-[1200px] md:h-[1200px] lg:h-[1200px] rounded-3xl shadow-xl border border-white/20"
+          frameBorder="0"
 
-            <input type="date" className="w-full p-3 rounded-lg bg-white/10 border border-white/20" />
+          title="Haldoor Registration Form"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <button className="w-full bg-pink-500 py-3 rounded-lg font-semibold hover:bg-pink-600 transition">
-              Gudbi Diiwaangelinta
-            </button>
-          </form>
-        </div>
-      </section>
+
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-slate-900 text-slate-300 py-10 text-center">
