@@ -75,7 +75,7 @@ export default function LandingPage() {
   </a>
 
   <a
-    href="#register"
+    href="https://wa.link/6l01tn"
     className="inline-flex items-center gap-2 bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl hover:scale-105 transition"
   >
     WhatsApp
