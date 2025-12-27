@@ -119,7 +119,7 @@ export default function LandingPage() {
       {/* ================= WHY US ================= */}
       <section id="why" className="bg-slate-50 py-20 px-6">
         <h3 className="text-3xl text-center text-pink-600 mb-14">
-          Maxaa Naga Duwan Schoolada Kale?
+          Maxaan uga duwanahay Schoolada Kale?
         </h3>
 
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8">
