@@ -3,170 +3,224 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import logo from "../assets/logo.jpg";
 
 export default function LandingPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuFuran, setMenuFuran] = useState(false);
 
   return (
     <div className="font-sans text-slate-800 overflow-x-hidden">
+
       {/* ================= NAVBAR ================= */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex items-center justify-between">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Haldoor Logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full" />
-            <h1 className="text-lg sm:text-xl font-bold text-primary">Haldoor Driving School</h1>
+            <img src={logo} alt="Haldoor Logo" className="w-10 h-10 rounded-full" />
+            <h1 className="text-lg sm:text-xl font-bold text-pink-600">
+              Haldoor Driving School
+            </h1>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            <a href="#features" className="text-slate-600 hover:text-primary transition">Casharada</a>
-            <a href="#schedule" className="text-slate-600 hover:text-primary transition">Wakhtiyada</a>
-            <a href="#pricing" className="text-slate-600 hover:text-primary transition">Qiimaha</a>
-            <a href="#register" className="bg-primary text-white px-4 sm:px-6 py-2.5 rounded-lg hover:bg-green-600 hover:scale-105 transition shadow-md">
+          {/* Desktop */}
+          <div className="hidden md:flex items-center gap-8 font-medium">
+            <a href="#about" className="hover:text-pink-400">Ku Saabsan</a>
+            <a href="#why" className="hover:text-pink-600">Maxaa Naga Duwan</a>
+            <a href="#courses" className="hover:text-pink-600">Casharro</a>
+            <a href="#schedule" className="hover:text-pink-600">Wakhtiyo</a>
+            <a href="#register" className="bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700 transition">
               Is Diiwaangeli
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6 text-slate-600" /> : <Menu className="w-6 h-6 text-slate-600" />}
+          {/* Mobile */}
+          <button className="md:hidden" onClick={() => setMenuFuran(!menuFuran)}>
+            {menuFuran ? <X /> : <Menu />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-slate-200 py-4 px-4 sm:px-6 transition-all duration-300 ease-in-out">
-            <div className="flex flex-col gap-4">
-              <a href="#features" className="text-slate-600 hover:text-primary transition">Casharada</a>
-              <a href="#schedule" className="text-slate-600 hover:text-primary transition">Wakhtiyada</a>
-              <a href="#pricing" className="text-slate-600 hover:text-primary transition">Qiimaha</a>
-              <a href="#register" className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-green-600 transition text-center">
-                Is Diiwaangeli
-              </a>
-            </div>
+        {menuFuran && (
+          <div className="md:hidden bg-white px-6 py-4 space-y-3 border-t">
+            <a href="#about" className="block">Ku Saabsan</a>
+            <a href="#why" className="block">Maxaa Naga Duwan</a>
+            <a href="#courses" className="block">Casharro</a>
+            <a href="#schedule" className="block">Wakhtiyo</a>
+            <a href="#register" className="block bg-pink-600 text-white text-center py-2 rounded-lg">
+              Is Diiwaangeli
+            </a>
           </div>
         )}
       </nav>
 
-      {/* Spacer */}
       <div className="h-20" />
 
       {/* ================= HERO ================= */}
-      <section className="relative bg-gradient-to-br from-primary to-purple-900 text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-20 md:py-36 grid md:grid-cols-2 gap-12 items-center flex-col-reverse md:flex-row">
-          {/* Text */}
-          <div className="space-y-6 sm:space-y-8 animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-              Ku Baro Wadista Baabuurta <br />
-              <span className="text-purple-200">Si Xirfad Leh</span>
+      <section className="bg-gradient-to-br from-pink-600 to-purple-900 text-white">
+        <div className="max-w-8xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl sm:text-4xl xl:text-6xl font-extrabold mb-6">
+              Noqo Darawal Badbaado Leh <br />
+              <span className="text-pink-200">Si Kalsooni & Xirfad Leh</span>
             </h2>
-            <p className="text-white/90 text-base sm:text-lg max-w-full sm:max-w-xl">
-              Haldoor Driving School waxay bixisaa tababar dhameystiran oo ku saabsan wadista baabuurta, shuruucda liisanka, iyo aqoon farsamo oo muhiim ah.
+
+            <p className="text-lg max-w-xl mb-8">
+              Haldoor Driving School waa xarun tababar darawalnimo oo ku taalla
+              Hargeysa, Somaliland, kuna takhasustay badbaado & xirfad.
             </p>
-            <a href="#register" className="inline-flex w-full md:w-auto items-center justify-center gap-2 bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:scale-105 transition shadow-xl group">
-              Is Diiwaangeli Hadda
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
-            </a>
+
+     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+  <a
+    href="#register"
+    className="inline-flex items-center gap-2 bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl hover:scale-105 transition"
+  >
+    Is Diiwaangeli Hadda
+    <ArrowRight className="w-5 h-5" />
+  </a>
+
+  <a
+    href="#register"
+    className="inline-flex items-center gap-2 bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl hover:scale-105 transition"
+  >
+    WhatsApp
+    <ArrowRight className="w-5 h-5" />
+  </a>
+</div>
+
+          
           </div>
 
-          {/* Logo Card */}
-          <div className="flex justify-center md:justify-end mb-10 md:mb-0">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-400 rounded-3xl blur opacity-25 group-hover:opacity-40 transition" />
-              <div className="relative bg-white/10 backdrop-blur-lg p-6 sm:p-10 rounded-3xl shadow-xl hover:scale-105 transition border border-white/20">
-                <img src={logo} alt="Haldoor" className="w-full max-w-xs sm:max-w-sm h-auto object-contain" />
-              </div>
-            </div>
+          <div className="flex justify-center">
+            <img src={logo} alt="Haldoor" className="max-w-sm w-full" />
           </div>
         </div>
       </section>
 
-      {/* ================= FEATURES / COURSES ================= */}
-      <section id="features" className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl text-center text-primary mb-12 sm:mb-16">Casharada Aan Bixino</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      {/* ================= ABOUT ================= */}
+      <section id="about" className="py-20 px-6 max-w-6xl mx-auto">
+        <h3 className="text-3xl text-center text-pink-600 mb-12">
+          Ku Saabsan Haldoor Driving School
+        </h3>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-8 rounded-3xl shadow-lg">
+            <h4 className="text-xl font-bold mb-4">Yaa Nahay?</h4>
+            <p>
+              Waxaan nahay xarun tababar darawalnimo oo ujeedadeedu tahay
+              soo saarista darawallo xirfad sare leh.
+            </p>
+          </div>
+
+          <div className="bg-white border p-8 rounded-3xl shadow-md">
+            <h4 className="text-xl font-bold mb-4 text-pink-600">Hadafkeenna</h4>
+            <p>
+              In la yareeyo shilalka waddooyinka lana abuuro darawallo badbaado leh.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WHY US ================= */}
+      <section id="why" className="bg-slate-50 py-20 px-6">
+        <h3 className="text-3xl text-center text-pink-600 mb-14">
+          Maxaa Naga Duwan Schoolada Kale?
+        </h3>
+
+        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            "Barashada wadista baabuurta",
-            "Barashada shuruucda liisanka",
-            "Barashada mechanic-ga fudud",
-            "Barashada mishiinka baabuurka",
-            "Barashada saliida baabuurta",
-            "Aqoon guud oo ku saabsan baabuurta",
-          ].map((item, index) => (
-            <div key={index} className="group relative border rounded-2xl p-6 sm:p-8 text-center shadow-sm hover:shadow-xl transition bg-white">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg sm:text-xl group-hover:scale-110 transition">
-                {index + 1}
-              </div>
-              <p className="font-semibold text-sm sm:text-base">{item}</p>
+            "Macalimiin Khibrad Leh",
+            "Qiimo Macquul ah",
+            "Nidaam Baris Casri ah",
+            "Tababar Gacanta ah",
+            "Badbaado & Xeerar",
+            "Kalsooni & Xirfad",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-6 rounded-2xl text-center shadow-md hover:scale-105 transition"
+            >
+              ✔ {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= COURSES ================= */}
+      <section id="courses" className="py-20 px-6 max-w-6xl mx-auto">
+        <h3 className="text-3xl text-center text-pink-600 mb-14">
+          Casharada Aan Bixino
+        </h3>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[
+            "Wadista Baabuurta",
+            "Shuruucda Liisanka",
+            "Mechanic-ga Fudud",
+            "Mishiinka Baabuurka",
+            "Saliida Baabuurta",
+            "Aqoon Guud oo Baabuurta",
+          ].map((item, i) => (
+            <div key={i} className="border p-6 rounded-2xl shadow-sm bg-white">
+              {item}
             </div>
           ))}
         </div>
       </section>
 
       {/* ================= SCHEDULE ================= */}
-      <section id="schedule" className="bg-slate-50 py-16 sm:py-20 px-4 sm:px-6 md:px-8">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl text-center text-primary mb-10 sm:mb-14">Wakhtiyada Aan Shaqayno</h3>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 text-base sm:text-lg">
+      <section id="schedule" className="bg-slate-50 py-20 px-6">
+        <h3 className="text-3xl text-center text-pink-600 mb-14">
+          Wakhtiyada Aan Shaqayno
+        </h3>
+
+        <div className="max-w-4xl mx-auto space-y-4">
           {[
-            "Sabti – Wado",
-            "Axad – Wado",
+            "Sabti – Wadista Baabuurta",
+            "Axad – Wadista Baabuurta",
             "Isniin – Parking",
             "Salaasa – Parking",
-            "Arbaca – Shuruucda & Calaamadaha Wadooyinka",
-            "Mechanic-ga Fudud",
+            "Arbaca – Shuruucda Wadooyinka",
+            "Khamiista – Mechanic-ga Fudud",
           ].map((day, i) => (
-            <div key={i} className="bg-white rounded-xl px-4 sm:px-6 py-3 sm:py-4 shadow-sm hover:shadow-md transition flex justify-between">
-              <span>{day}</span>
-              <span className="text-primary font-semibold">30 min</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= PRICING ================= */}
-      <section id="pricing" className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl text-center text-primary mb-12 sm:mb-16">Qiimaha</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
-          {[
-            { title: "Bishii", price: "$80" },
-            { title: "15 Cisho", price: "$40" },
-          ].map((plan, i) => (
-            <div key={i} className="border rounded-3xl p-6 sm:p-10 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition bg-white">
-              <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">{plan.title}</h4>
-              <p className="text-4xl sm:text-5xl font-extrabold text-primary">{plan.price}</p>
+            <div
+              key={i}
+              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 rounded-xl"
+            >
+              {day}
             </div>
           ))}
         </div>
       </section>
 
       {/* ================= REGISTER ================= */}
-      <section id="register" className="relative bg-gradient-to-br from-primary to-purple-900 text-white py-16 sm:py-24 px-4 sm:px-6 md:px-8 overflow-hidden">
-        <div className="max-w-xl mx-auto relative">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-center">Is Diiwaangeli Online</h3>
-          <form className="bg-white/10 backdrop-blur-lg text-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-white/20 space-y-4 sm:space-y-5">
-            <input type="text" placeholder="Magacaaga" className="w-full p-3 sm:p-4 bg-white/10 border border-white/20 rounded-lg focus:outline-primary backdrop-blur-sm" />
-            <input type="tel" placeholder="Telefoonka" className="w-full p-3 sm:p-4 bg-white/10 border border-white/20 rounded-lg focus:outline-primary backdrop-blur-sm" />
-            <select className="w-full p-3 sm:p-4 bg-white/10 border border-white/20 rounded-lg text-white">
-              <option>Dooro Casharka</option>
-              <option>Wadista Baabuurta</option>
-              <option>Shuruucda Liisanka</option>
-              <option>Mechanic-ga Fudud</option>
+      <section
+        id="register"
+        className="bg-gradient-to-br from-pink-600 to-purple-900 text-white py-24 px-6"
+      >
+        <div className="max-w-xl mx-auto bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-2xl">
+          <h3 className="text-3xl font-extrabold text-center mb-8">
+            Is Diiwaangelinta Ardayga
+          </h3>
+
+          <form className="space-y-4">
+            <input className="w-full p-3 rounded-lg bg-white/10 border border-white/20" placeholder="Magaca oo Dhan" />
+            <input className="w-full p-3 rounded-lg bg-white/10 border border-white/20" placeholder="Halka aad dagto" />
+            <input className="w-full p-3 rounded-lg bg-white/10 border border-white/20" placeholder="Lambarka Taleefanka" />
+
+            <select className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white">
+              <option className="text-black">Mudada aad rabto inaad ku barato</option>
+              <option className="text-black">15 Maalmood</option>
+              <option className="text-black">30 Maalmood</option>
             </select>
-            <button className="w-full bg-primary text-white py-3 sm:py-4 rounded-lg hover:bg-green-600 hover:scale-105 transition shadow-xl flex items-center justify-center gap-2">
-              Diiwaangeli
-              <ArrowRight className="w-5 h-5" />
+
+            <input type="date" className="w-full p-3 rounded-lg bg-white/10 border border-white/20" />
+
+            <button className="w-full bg-pink-500 py-3 rounded-lg font-semibold hover:bg-pink-600 transition">
+              Gudbi Diiwaangelinta
             </button>
           </form>
         </div>
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-slate-900 text-slate-300 py-8 sm:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center text-sm sm:text-base">
-          © {new Date().getFullYear()} Haldoor Driving School — Xuquuqda Way Xafidan Tahay
-        </div>
+      <footer className="bg-slate-900 text-slate-300 py-10 text-center">
+        © {new Date().getFullYear()} Haldoor Driving School — Xuquuqda Way Xafidan Tahay
       </footer>
     </div>
   );
