@@ -39,9 +39,9 @@ export default function LandingPage() {
         {menuFuran && (
           <div className="md:hidden bg-white px-6 py-4 space-y-3 border-t">
             <a href="#about" className="block">Ku Saabsan</a>
-            <a href="#why" className="block">Maxaa Naga Duwan</a>
+            <a href="#why" className="block">Maxaa Naga Duway</a>
             <a href="#courses" className="block">Casharro</a>
-            <a href="#schedule" className="block">Wakhtiyo</a>
+            <a href="#schedule" className="block">Wakhtiga</a>
             <a href="#register" className="block bg-pink-600 text-white text-center py-2 rounded-lg">
               Is Diiwaangeli
             </a>
@@ -57,7 +57,7 @@ export default function LandingPage() {
           <div>
             <h2 className="text-3xl sm:text-4xl xl:text-6xl font-extrabold mb-6">
               Noqo Darawal Badbaado Leh <br />
-              <span className="text-pink-200">Si Kalsooni & Xirfad Leh</span>
+              <span className="text-pink-200">ku baro Kalsooni & Xirfad </span>
             </h2>
 
             <p className="text-lg max-w-xl mb-8">
@@ -100,7 +100,7 @@ export default function LandingPage() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-8 rounded-3xl shadow-lg">
-            <h4 className="text-xl font-bold mb-4">Yaa Nahay?</h4>
+          
             <p>
               Waxaan nahay xarun tababar darawalnimo oo ujeedadeedu tahay
               soo saarista darawallo xirfad sare leh.
@@ -173,7 +173,7 @@ export default function LandingPage() {
           {[
             "Sabti – Wadista Baabuurta",
             "Axad – Wadista Baabuurta",
-            "Isniin – Parking",
+            "Isniin – Reverse",
             "Salaasa – Parking",
             "Arbaca – Shuruucda Wadooyinka",
             "Khamiista – Mechanic-ga Fudud",
